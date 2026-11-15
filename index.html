@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BUNBITE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <h1>BUNBITE</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Menu</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <section>
+        <h2>OUR MENU</h2>
+        <h2>Discover your favorites, enjoy every bite!</h2>
+        <p>Jelajahi beragam pilihan Burger, Kebab, Hotdog, Camilan dan Minuman menyegarkan kami yang lezat. Temukan menu favorit Anda dan nikmati setiap gigitannya bersama BUNBITE.</p>
+    </section>
+
+    <!-- SEARCH BAR -->
+<div class="menu-filter">
+
+    <div class="search-box">
+        <span>⌕</span>
+        <input 
+            type="text" 
+            id="searchInput"
+            placeholder="Search hotdog, burger, kebab..."
+        >
+    </div>
+
+    <!-- CATEGORY BUTTONS -->
+    <div class="category-buttons">
+
+        <button class="category-btn active" data-category="all">
+            All Menu
+        </button>
+
+        <button class="category-btn" data-category="Burger">
+            Burger
+        </button>
+
+        <button class="category-btn" data-category="Kebab">
+            Kebab
+        </button>
+
+        <button class="category-btn" data-category="Hotdog">
+            Hotdog
+        </button>
+
+        <button class="category-btn" data-category="Cemilan">
+            Cemilan
+        </button>
+
+        <button class="category-btn" data-category="Minuman">
+            Minuman
+        </button>
+
+    </div>
+
+</div>
+
+<!-- PRODUK -->
+<section class="menu-section">
+
+    <h2>Our Menu</h2>
+
+    <div class="menu-container">
+
+        <!-- KATEGORI BURGER -->
+
+        <div class="product-card" data-category="burger">
+            <img src="images/Classic Beef Burger.jpg" alt="Burger">
+            <h3>Classic Beef Burger</h3>
+            <p>Beef patty, selada, tomat dan saus.</p>
+            <h4>Rp18.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="product-card" data-category="burger">
+            <img src="images/Crispy Chicken Burger.jpg" alt="Burger">
+            <h3>Crispy Chicken Burger</h3>
+            <p>Ayam crispy, selada, tomat dan saos.</p>
+            <h4>Rp20.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="product-card" data-category="burger">
+            <img src="images/Double Cheese Burger.jpeg" alt="Burger">
+            <h3>Double Cheese Burger</h3>
+            <p>Dua patty, keju, selada, tomat dan saus.</p>
+            <h4>Rp25.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+
+        <!-- KATEGORI KEBAB -->
+
+        <div class="product-card" data-category="kebab">
+            <img src="images/Classic Beef Kebab.jpg" alt="Kebab">
+            <h3>Classic Beef Kebab</h3>
+            <p>Daging sapi, selada, tomat dan saus.</p>
+            <h4>Rp15.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="product-card" data-category="kebab">
+            <img src="images/Chicken Kebab.jpg" alt="Kebab">
+            <h3>Chicken Kebab</h3>
+            <p>Ayam, selada, tomat dan saus.</p>
+            <h4>Rp15.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="product-card" data-category="kebab">
+            <img src="images/Crispy Chicken Kebab.jpg" alt="Kebab">
+            <h3>Crispy Chicken Kebab</h3>
+            <p>Ayam crispy, selada, tomat dan saus.</p>
+            <h4>Rp17.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+
+        <!-- KATEGORI HOTDOG -->
+
+        <div class="product-card" data-category="hotdog">
+            <img src="images/Classic Hotdog.jpeg" alt="Hotdog">
+            <h3>Classic Hotdog</h3>
+            <p>Sosis, selada dan saus.</p>
+            <h4>Rp15.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="product-card" data-category="hotdog">
+            <img src="images/Cheese Hotdog.jpeg" alt="Hotdog">
+            <h3>Cheese Hotdog</h3>
+            <p>Sosis, keju, selada dan saus.</p>
+            <h4>Rp18.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="product-card" data-category="hotdog">
+            <img src="images/Crispy Hotdog.jpeg" alt="Hotdog">
+            <h3>Crispy Hotdog</h3>
+            <p>Sosis crispy, selada dan saus.</p>
+            <h4>Rp20.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+
+        <!-- KATEGORI CEMILAN -->
+
+        <div class="product-card" data-category="cemilan">
+            <img src="images/french fries.jpeg" alt="Cemilan">
+            <h3>French Fries</h3>
+            <p>Kentang goreng renyah dan gurih.</p>
+            <h4>Rp10.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="product-card" data-category="cemilan">
+            <img src="images/Crispy Chicken Bites.jpeg" alt="Cemilan">
+            <h3>Crispy Chicken Bites</h3>
+            <p>Potongan ayam crispy dengan tekstur renyah.</p>
+            <h4>Rp18.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+
+        <!-- KATEGORI MINUMAN -->
+
+        <div class="product-card" data-category="minuman">
+            <img src="images/Ice Tea.jpg" alt="Minuman">
+            <h3>Ice Tea</h3>
+            <p>Teh manis dingin yang menyegarkan.</p>
+            <h4>Rp5.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="product-card" data-category="minuman">
+            <img src="images/Lychee Tea.jpg" alt="Minuman">
+            <h3>Lychee Tea</h3>
+            <p>Teh manis dengan rasa lychee yang lezat.</p>
+            <h4>Rp10.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="product-card" data-category="minuman">
+            <img src="images/Lemon Tea.jpg" alt="Minuman">
+            <h3>Lemon Tea</h3>
+            <p>Teh manis dengan rasa lemon yang segar.</p>
+            <h4>Rp8.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="product-card" data-category="minuman">
+            <img src="images/Blackcurrant Tea.jpg" alt="Minuman">
+            <h3>Blackcurrant Tea</h3>
+            <p>Teh manis dengan rasa blackcurrant yang khas.</p>
+            <h4>Rp10.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="product-card" data-category="minuman">
+            <img src="images/Red Velvet.jpg" alt="Minuman">
+            <h3>Red Velvet</h3>
+            <p>Minuman berbasis red velvet yang lezat.</p>
+            <h4>Rp15.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="product-card" data-category="minuman">
+            <img src="images/Cappucino.jpg" alt="Minuman">
+            <h3>Cappucino</h3>
+            <p>Kopi cappucino yang lezat dan menggugah selera.</p>
+            <h4>Rp13.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="product-card" data-category="minuman">
+            <img src="images/Thai Tea.jpg" alt="Minuman">
+            <h3>Thai Tea</h3>
+            <p>Teh Thailand dengan rasa khas yang lezat.</p>
+            <h4>Rp15.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="product-card" data-category="minuman">
+            <img src="images/Matcha.jpg" alt="Minuman">
+            <h3>Matcha</h3>
+            <p>Minuman berbasis matcha yang lezat.</p>
+            <h4>Rp20.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="product-card" data-category="minuman">
+            <img src="images/Dark Choco.jpg" alt="Minuman">
+            <h3>Dark Choco</h3>
+            <p>Minuman berbasis dark chocolate yang lezat.</p>
+            <h4>Rp18.000</h4>
+            <button>Beli Sekarang</button>
+        </div>
+
+    </div>
+</section>
+
+</section>
+
+
+          </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 BUNBITE. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
