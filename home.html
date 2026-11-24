@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Home — BUNBITE</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+ <div class="container nav">
+  <a class="logo" href="home.html"><span class="bun">BUN</span><span class="bite">BITE</span><small>GOOD FOOD, HAPPY BITES!</small></a>
+  <nav class="navlinks">
+   <a href="home.html">Home</a><a href="menu.html">Menu</a><a href="about us.html">About Us</a><a href="blog.html">Blog</a><a href="contact.htm">Contact</a>
+  </nav>
+  <div class="nav-actions">
+   <a class="order" href="menu.html">Order Now</a>
+
+<button class="icon-btn" onclick="openSearch()" aria-label="Search">
+    <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+
+<button class="icon-btn" onclick="openLogin()" aria-label="Account">
+    <i class="fa-solid fa-user"></i>
+</button>
+
+<button class="icon-btn" onclick="openDrawer()" aria-label="Cart">
+    <i class="fa-solid fa-cart-shopping"></i>
+</button>
+  </div>
+ </div>
+</header>
+
+<section class="hero">
+ <img class="hero-bg" src="images/hero.jpg" alt="BUNBITE food" onerror="this.style.display='none'">
+ <div class="container hero-content"><div class="eyebrow">BUNBITE · FAST FOOD & DRINKS</div><h1>Good food,<br><em>happy bites.</em></h1><p>Temukan burger, kebab, hotdog, snack, ice cream, dan minuman favorit dengan rasa yang lezat dan harga yang terjangkau.</p><a class="btn btn-yellow" href="menu.html">Explore Menu</a></div>
+ <div class="hero-meta"><small>OPEN DAILY</small><br><b>Monday — Sunday<br>09.00 — 22.00 WIB</b></div>
+</section>
+<section class="section"><div class="container">
+ <div class="section-head"><div><div class="eyebrow">FROM THE KITCHEN</div><h2>Customer favorites.</h2></div><div><p>Best seller BUNBITE yang paling cocok untuk mulai menikmati Good Food, Happy Bites!</p><a class="btn btn-light" href="menu.html" style="margin-top:15px">View Full Menu</a></div></div>
+ <div id="homeFavorites" class="fav-grid"></div>
+</div></section>
+<section class="section section-cream"><div class="container intro">
+ <div><div class="eyebrow">MORE THAN FAST FOOD</div><h2>Made for your everyday cravings.</h2><p>BUNBITE adalah bisnis Food & Beverage yang menghadirkan makanan cepat saji dan minuman dengan konsep modern, praktis, dan terjangkau.</p><a class="btn btn-dark" href="about us.html" style="margin-top:22px">Know BUNBITE</a></div>
+ <div><div class="quote">“Makanan lezat tidak harus selalu mahal.”</div><p>Dengan pilihan yang beragam, kualitas rasa, pelayanan yang praktis, dan pemesanan digital, BUNBITE hadir untuk membuat pengalaman kuliner terasa lebih mudah dan menyenangkan.</p><div class="stats"><div class="stat"><strong>40</strong>menu</div><div class="stat"><strong>15–35</strong>target age</div><div class="stat"><strong>QRIS</strong>payment</div></div></div>
+</div></section>
+<section class="section"><div class="container">
+ <div class="section-head"><div><div class="eyebrow">WHAT CUSTOMERS SAY</div><h2>Happy bites, happy people.</h2></div></div>
+ <div class="testimonial"><div class="testi"><p>“Rasanya enak dan harganya masih ramah di kantong. Pilihan menunya juga banyak.”</p><small>— BUNBITE Customer</small></div><div class="testi"><p>“Praktis banget buat cari makanan cepat. Tinggal pilih menu favorit dan order.”</p><small>— BUNBITE Customer</small></div></div>
+</div></section>
+<section class="cta-strip"><div class="container"><div><div class="eyebrow">READY TO BITE?</div><h2 style="color:white">Find your favorite.</h2><p>Explore all BUNBITE menus and order your next happy bite.</p></div><a class="btn btn-yellow" href="menu.html">Order Now</a></div></section>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+ const wrap=document.querySelector("#homeFavorites");
+ wrap.innerHTML=BEST.slice(0,3).map(n=>productCard(PRODUCTS.find(p=>p[0]===n))).join("");
+});
+</script>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+
+      <!-- BRAND -->
+      <div class="footer-brand">
+        <div class="logo">
+          <span style="color:#fff">BUN</span><span style="color:var(--yellow)">BITE</span>
+          <small style="color:#cbb8ac">GOOD FOOD, HAPPY BITES!</small>
+        </div>
+
+        <p>
+          Fast food dan minuman modern dengan rasa yang menyenangkan,
+          pilihan beragam, dan harga yang bersahabat.
+        </p>
+
+        <span class="open-pill open-status">
+          <span class="dot"></span> Checking...
+        </span>
+      </div>
+
+      <!-- NAVIGATION -->
+      <div class="footer-navigation">
+        <div class="footer-links">
+          <a href="home.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="about us.html">About Us</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.htm">Contact</a>
+        </div>
+      </div>
+
+      <!-- COME BY + SOCIAL -->
+      <div class="footer-right">
+
+        <div class="eyebrow">Come by</div>
+
+        <p>
+          Monday — Sunday<br>
+          09.00 — 22.00 WIB
+        </p>
+
+        <div class="socials">
+
+          <a href="https://www.instagram.com/ush.sugenghartono"
+             target="_blank"
+             aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://www.tiktok.com/@ush.sugenghartono"
+             target="_blank"
+             aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 BUNBITE. All rights reserved.</span>
+      <span>Good Food, Happy Bites!</span>
+    </div>
+
+  </div>
+</footer>
+
+<div id="overlay" class="overlay" onclick="closeDrawer()"></div>
+<aside id="cartDrawer" class="drawer">
+ <div class="drawer-head"><h2 style="font-size:2rem">Your Cart</h2><button class="icon-btn" onclick="closeDrawer()">×</button></div>
+ <div id="cartItems" class="cart-items"></div>
+ <div class="cart-total"><div><span>Total</span><span id="cartTotal">Rp0</span></div><button class="btn btn-dark" style="width:100%" onclick="checkout()">Proceed to Checkout</button></div>
+</aside>
+<div id="loginModal" class="modal">
+ <div class="modal-head"><div><div class="eyebrow">YOUR ACCOUNT</div><h2 style="font-size:2.5rem">Welcome back.</h2></div><button class="icon-btn" onclick="closeDrawer()">×</button></div>
+ <p style="color:var(--muted);font-size:.8rem;margin-bottom:18px">Sign in to continue your BUNBITE order.</p>
+ <form onsubmit="event.preventDefault();alert('Demo login berhasil.');closeDrawer()">
+  <input type="email" placeholder="Email" required><input type="password" placeholder="Password" required>
+  <button class="btn btn-dark" style="width:100%">Sign in</button>
+ </form>
+ <p style="text-align:center;margin-top:15px;font-size:.75rem;color:var(--muted)">Belum punya akun? <b>Create account</b></p>
+</div>
+<div id="searchModal" class="search-modal">
+ <div style="display:flex;gap:10px;align-items:center"><input id="globalSearch" oninput="globalSearch(this.value)" placeholder="Search BUNBITE..." /><button class="icon-btn" onclick="closeDrawer()">×</button></div>
+ <div id="searchResults" style="margin-top:18px;max-height:65vh;overflow:auto"></div>
+</div>
+<script>
+const PRODUCTS = [
+["Classic Beef Burger","Burger",18000,"Juicy beef patty dengan fresh lettuce, tomato, dan saus spesial dalam bun lembut.","Classic Beef Burger.jpg"],
+["Cheese Burger","Burger",23000,"Beef patty juicy dengan lelehan cheese dan saus spesial yang gurih dan creamy.","Cheese Burger.jpg"],
+["Crispy Chicken Burger","Burger",25000,"Crispy chicken yang renyah dengan lettuce dan creamy sauce dalam bun lembut.","Crispy Chicken Burger.jpg"],
+["Spicy Chicken Burger","Burger",25000,"Crispy chicken dengan saus pedas gurih untuk kamu yang suka sensasi spicy.","Spicy Chicken Burger.jpg"],
+["Double Beef Burger","Burger",25000,"Dua beef patty juicy dengan cheese dan saus spesial untuk rasa yang lebih mantap.","Double Beef Burger.jpg"],
+["Beef Kebab","Kebab",18000,"Irisan beef gurih dengan sayuran segar dan saus khas dalam tortilla lembut.","Beef Kebab.jpg"],
+["Chicken Kebab","Kebab",17000,"Potongan chicken yang juicy dipadukan dengan sayuran segar dan saus creamy.","Chicken Kebab.jpg"],
+["Cheese Kebab","Kebab",19000,"Kebab gurih dengan beef, sayuran segar, dan melted cheese yang creamy.","Cheese Kebab.jpg"],
+["Spicy Beef Kebab","Kebab",19000,"Beef kebab dengan saus pedas gurih untuk sensasi yang lebih spicy.","Spicy Beef Kebab.jpg"],
+["Double Meat Kebab","Kebab",21000,"Porsi ekstra dengan double meat, sayuran segar, dan saus khas BUNBITE.","Double Meat Kebab.jpg"],
+["Classic Hotdog","Hotdog",15000,"Sosis juicy dalam bun lembut dengan saus dan mustard yang klasik.","Classic Hotdog.jpg"],
+["Cheese Hotdog","Hotdog",17000,"Sosis juicy dengan melted cheese dan saus gurih dalam bun lembut.","Cheese Hotdog.jpg"],
+["Crispy Chicken Hotdog","Hotdog",18000,"Crispy chicken dan saus creamy dalam bun lembut dengan perpaduan renyah dan gurih.","Crispy Chicken Hotdog.jpg"],
+["Spicy Hotdog","Hotdog",17000,"Hotdog dengan saus pedas gurih yang cocok untuk pencinta rasa spicy.","Spicy Hotdog.jpg"],
+["BBQ Hotdog","Hotdog",18000,"Sosis juicy dengan BBQ sauce yang manis, smoky, dan gurih.","BBQ Hotdog.jpg"],
+["Iced Cappuccino","Coffee",12000,"Espresso dan creamy milk dengan foam lembut yang disajikan dingin.","Iced Cappuccino.jpg"],
+["Iced Coffee Milk","Coffee",12000,"Espresso dengan creamy milk yang smooth dan ringan.","Iced Coffee Milk.jpg"],
+["Caramel Coffee","Coffee",14000,"Kopi creamy dengan sentuhan caramel yang manis dan harum.","Caramel Coffee.jpg"],
+["Mocha Coffee","Coffee",14000,"Perpaduan kopi dan chocolate dengan rasa creamy yang nikmat.","Mocha Coffee.jpg"],
+["Vanilla Coffee","Coffee",14000,"Kopi creamy dengan aroma vanilla yang lembut dan manis.","Vanilla Coffee.jpg"],
+["Classic Iced Tea","Tea",5000,"Teh dingin yang fresh dan ringan, cocok sebagai teman makan.","Classic Iced Tea.jpg"],
+["Lemon Tea","Tea",8000,"Teh dingin dengan perpaduan lemon yang segar dan sedikit manis.","Lemon Tea.jpg"],
+["Peach Tea","Tea",15000,"Teh dingin dengan rasa peach yang fruity, manis, dan menyegarkan.","Peach Tea.jpg"],
+["Lychee Tea","Tea",15000,"Teh dingin dengan rasa lychee yang manis dan aroma buah yang segar.","Lychee Tea.jpg"],
+["Apple Tea","Tea",15000,"Teh dingin dengan sentuhan rasa apple yang fruity dan refreshing.","Apple Tea.jpg"],
+["Classic Chocolate","Choco & Matcha",12000,"Chocolate drink yang creamy dengan rasa cokelat manis dan rich.","Classic Chocolate.jpg"],
+["Iced Chocolate","Choco & Matcha",13000,"Minuman cokelat dingin yang creamy dan menyegarkan.","Iced Chocolate.jpg"],
+["Matcha Latte","Choco & Matcha",16000,"Premium matcha dengan creamy milk untuk rasa earthy yang lembut.","Matcha Latte.jpg"],
+["Strawberry Matcha","Choco & Matcha",19000,"Perpaduan strawberry manis, creamy milk, dan matcha yang unik dan refreshing.","Strawberry Matcha.jpg"],
+["Choco Matcha Latte","Choco & Matcha",20000,"Perpaduan creamy chocolate dan matcha dengan rasa manis, rich, dan unik.","Choco Matcha Latte.jpg"],
+["French Fries","Snack",10000,"Kentang goreng renyah dengan rasa gurih yang cocok dinikmati kapan saja.","French Fries.jpg"],
+["Curly Fries","Snack",13000,"Kentang berbentuk spiral yang crispy dengan bumbu gurih yang flavorful.","Curly Fries.jpg"],
+["Chicken Nugget","Snack",15000,"Chicken nugget yang crispy di luar dan juicy di dalam.","Chicken Nugget.jpg"],
+["Crispy Chicken Wings","Snack",18000,"Chicken wings renyah dengan bumbu gurih yang bikin susah berhenti.","Crispy Chicken Wings.jpg"],
+["Mozzarella Sticks","Snack",20000,"Mozzarella sticks crispy dengan lelehan cheese yang creamy di dalam.","Mozzarella Sticks.jpg"],
+["Chocolate Sundae","Ice Cream",8000,"Soft ice cream creamy dengan chocolate sauce yang manis dan rich.","Chocolate Sundae.jpg"],
+["Vanilla Sundae","Ice Cream",8000,"Soft ice cream vanilla yang lembut dengan rasa manis yang ringan.","Vanilla Sundae.jpg"],
+["Strawberry Sundae","Ice Cream",9000,"Creamy soft ice cream dengan strawberry sauce yang manis dan fruity.","Strawberry Sundae.jpg"],
+["Choco Crunch Sundae","Ice Cream",12000,"Soft ice cream creamy dengan chocolate sauce dan crunchy topping.","Choco Crunch Sundae.jpg"],
+["Cookies & Cream Sundae","Ice Cream",12000,"Soft ice cream vanilla dengan cookies crumble yang renyah dan manis.","Cookies & Cream Sundae.jpg"]
+];
+const BEST=["Classic Beef Burger","Beef Kebab","Cheese Hotdog","Iced Cappuccino","Strawberry Matcha","French Fries"];
+const rupiah=n=>new Intl.NumberFormat("id-ID",{style:"currency",currency:"IDR",maximumFractionDigits:0}).format(n);
+let cart=JSON.parse(localStorage.getItem("bunbiteCart")||"[]");
+
+function img(name){return "images/"+name}
+function productCard(p,compact=false){
+ const [name,cat,price,desc,file]=p;
+ return `<article class="menu-card">
+   <div class="card-img"><img src="${img(file)}" alt="${name}" onerror="this.style.opacity='.12'"></div>
+   <div class="card-body"><div class="card-top"><span class="badge">${cat}</span>${BEST.includes(name)?'<span class="badge">Best Seller</span>':''}</div>
+   <h3>${name}</h3><p>${desc}</p><div class="add-row"><strong class="price">${rupiah(price)}</strong><button class="add-btn" onclick="addCart('${name.replaceAll("'","\\'")}')">Add +</button></div></div>
+ </article>`
+}
+function saveCart(){localStorage.setItem("bunbiteCart",JSON.stringify(cart));renderCart()}
+function addCart(name){
+ const p=PRODUCTS.find(x=>x[0]===name); if(!p)return;
+ const item=cart.find(x=>x.name===name); item?item.qty++:cart.push({name,price:p[2],file:p[4],qty:1});
+ saveCart(); openDrawer();
+}
+function changeQty(name,delta){
+ const i=cart.findIndex(x=>x.name===name); if(i<0)return;
+ cart[i].qty+=delta;if(cart[i].qty<=0)cart.splice(i,1);saveCart()
+}
+function renderCart(){
+ const box=document.querySelector("#cartItems"); if(!box)return;
+ box.innerHTML=cart.length?cart.map(x=>`<div class="cart-item"><img src="${img(x.file)}"><div><strong>${x.name}</strong><small>${rupiah(x.price)}</small></div><div class="cart-controls"><div class="qty"><button onclick="changeQty('${x.name.replaceAll("'","\\'")}',-1)">−</button> ${x.qty} <button onclick="changeQty('${x.name.replaceAll("'","\\'")}',1)">+</button></div></div></div>`).join(""):`<p style="color:var(--muted)">Your cart is empty.</p>`;
+ const total=cart.reduce((s,x)=>s+x.price*x.qty,0); const totalEl=document.querySelector("#cartTotal");if(totalEl)totalEl.textContent=rupiah(total);
+ const count=document.querySelector("#cartCount");if(count)count.textContent=cart.reduce((s,x)=>s+x.qty,0)
+}
+function openDrawer(){document.querySelector("#overlay")?.classList.add("show");document.querySelector("#cartDrawer")?.classList.add("show");renderCart()}
+function closeDrawer(){document.querySelector("#overlay")?.classList.remove("show");document.querySelector("#cartDrawer")?.classList.remove("show");document.querySelectorAll(".modal,.search-modal").forEach(x=>x.classList.remove("show"))}
+function openLogin(){document.querySelector("#overlay")?.classList.add("show");document.querySelector("#loginModal")?.classList.add("show")}
+function checkout(){if(!cart.length){alert("Keranjang masih kosong.");return}openLogin()}
+function openSearch(){document.querySelector("#overlay")?.classList.add("show");document.querySelector("#searchModal")?.classList.add("show");document.querySelector("#globalSearch")?.focus()}
+function globalSearch(q){
+ const out=document.querySelector("#searchResults"); if(!out)return;
+ q=q.toLowerCase().trim(); if(!q){out.innerHTML="<p style='color:var(--muted)'>Ketik nama menu atau informasi yang ingin dicari.</p>";return}
+ const matches=PRODUCTS.filter(p=>(p[0]+" "+p[1]+" "+p[3]).toLowerCase().includes(q));
+ out.innerHTML=matches.length?matches.slice(0,6).map(productCard).join(""):"<p style='color:var(--muted)'>Tidak ditemukan hasil yang cocok.</p>"
+}
+function currentOpen(){
+ const now=new Date(); const h=now.getHours()+now.getMinutes()/60; const open=h>=9&&h<22;
+ document.querySelectorAll(".open-status").forEach(el=>{el.innerHTML=open?'<span class="dot"></span> Open now · 09.00–22.00 WIB':'<span class="dot" style="background:var(--red)"></span> Closed · Opens 09.00 WIB'})
+}
+document.addEventListener("DOMContentLoaded",()=>{renderCart();currentOpen()});
+</script></body></html>
